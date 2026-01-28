@@ -12,6 +12,13 @@ dependencies {
 
     implementation libs.caffeine3
     implementation libs.logback12
+
+    testImplementation project(":micrometer-test")
+    testImplementation platform(libs.junitBom)
+    testImplementation libs.junitJupiter
+    testRuntimeOnly libs.junitPlatformLauncher
+    testImplementation libs.assertj
+    testImplementation libs.mockitoCore5
 }
 
 java {
